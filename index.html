@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Adaptiv</title>
+        <meta charset="utf-8" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/slick.css" />
+        <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+    </head>
+    <body>
+        <div class="wrapper">
+                    <div id="slider">
+                    <div><img src="img/photo01.png" class="img-slider" alt="foto" /></div>
+                    <div><img src="img/photo02.png" class="img-slider" alt="foto" /></div>
+                    <div><img src="img/photo03.png" class="img-slider" alt="foto" /></div>
+                </div>
+            </main>
+        </div>
+        <script src="jquery/jquery-1.9.1.js"></script>
+        <script src="js/slick.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#slider").slick({
+                    dots: true,
+                    infinite: true,
+                    speed: 300,
+                    slidesToShow: 1,
+                    adaptiveHeight: true,
+                });
+            });
+        </script>
+        <script>
+            let burger = document.querySelector("#burger-icon");
+            let header = document.querySelector("#header");
+            burger.onclick = function () {
+                header.classList.toggle("menu-open");
+            };
+        </script>
+    </body>
+</html>
